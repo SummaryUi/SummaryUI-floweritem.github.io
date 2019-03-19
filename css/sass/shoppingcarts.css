@@ -1,0 +1,230 @@
+@charset "UTF-8";
+body, p, div, ol, ul, dd, dt, td, form, input, h1, h2, h3, h4, h5, h6, input, select, textarea {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "宋体",Arial;
+  background-color: #f8f8f8;
+  font: 12px/1.5 "Microsoft YaHei",Tahoma,Helvetica,Arial; }
+
+a {
+  text-decoration: none; }
+
+ul, ol {
+  list-style: none; }
+
+input {
+  outline: none; }
+
+.header {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 18px;
+  background-color: #222222; }
+
+.header00 {
+  width: 1100px;
+  height: 60px;
+  margin: 0 auto; }
+
+.header00_a {
+  float: left; }
+
+.header00_a a {
+  display: block;
+  float: left;
+  font-size: 12px;
+  padding: 0 20px;
+  line-height: 60px;
+  color: #eeeeee; }
+
+.header00_ul {
+  float: right; }
+  .header00_ul li {
+    float: left;
+    line-height: 60px; }
+    .header00_ul li p {
+      font-size: 14px;
+      color: #bbbbbb;
+      float: left;
+      line-height: 60px; }
+    .header00_ul li span {
+      display: inline-block;
+      float: left;
+      width: 24px;
+      height: 24px;
+      margin-top: 20px;
+      text-align: center;
+      line-height: 22px;
+      background-image: url(../images/page-step-bg.png);
+      margin-right: 4px;
+      color: #ffffff; }
+    .header00_ul li:nth-child(2n) {
+      width: 60px;
+      height: 10px;
+      margin-top: 25px;
+      background-image: url(../images/page-step-bg.png);
+      background-position: left -148px; }
+    .header00_ul li:nth-child(1) span {
+      background-position: 0 -32px; }
+
+.shopping {
+  width: 1100px;
+  margin: 0 auto; }
+
+.shopping_top {
+  width: 100%;
+  height: 52px; }
+
+.shopping_top a {
+  box-sizing: border-box;
+  display: block;
+  padding: 0 16px;
+  margin-top: 12px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 2px;
+  float: right; }
+  .shopping_top a:nth-child(1) {
+    background-color: #ff6a00;
+    margin-left: 10px;
+    color: #fff;
+    border: 1px solid #ffaa00; }
+  .shopping_top a:nth-child(2) {
+    background-color: #f0f0f0;
+    color: #666666;
+    border: 1px solid #c4c4c4; }
+
+.shopping_main {
+  background: #fff; }
+
+.shopping_mnav {
+  padding-top: 24px;
+  height: 48px;
+  line-height: 48px;
+  border-bottom: 1px solid #e4e4e4; }
+
+.shopping_mnav01 {
+  float: left; }
+
+.shopping_mnav01 input {
+  background-color: #ff6600;
+  border: none;
+  margin-left: 10px;
+  margin-right: 5px;
+  vertical-align: middle; }
+
+.shopping_mnav02 {
+  float: right; }
+
+.shopping_mnav02 > div {
+  display: block;
+  width: 150px;
+  line-height: 48px;
+  float: left;
+  text-align: center; }
+  .shopping_mnav02 > div:last-child {
+    width: 200px; }
+
+.shopping_mcarts {
+  height: 72px;
+  line-height: 48px; }
+
+.shopping_mcarts .shopping_mnav01 {
+  height: 72px; }
+
+.shopping_mcarts .shopping_mnav02 {
+  height: 72px; }
+
+.shopping_mnav01 a {
+  line-height: 72px; }
+
+.mnav02_count {
+  box-sizing: border-box;
+  width: 94;
+  height: 22px;
+  border: 1px solid #e8e8e8; }
+
+.mnav02_count a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  background-color: #e8e8e8; }
+
+.mnav02_count input {
+  float: left;
+  width: 32px;
+  border: none; }
+
+/* footer部分 */
+footer {
+  width: 100%;
+  height: 340px;
+  background-color: #3a3a3a; }
+
+.footer_top {
+  width: 1200px;
+  height: 185px;
+  margin: 0 auto;
+  padding-top: 35px; }
+
+.footer_top dl {
+  margin: 0 60px;
+  float: left; }
+
+.footer_top dl dd {
+  font-size: 16px;
+  color: #cccccc;
+  line-height: 36px; }
+
+.footer_top dl dt {
+  font-size: 11px;
+  color: #cccccc;
+  line-height: 28px; }
+
+.footer_top_weixin {
+  float: left;
+  margin-right: 90px; }
+
+.footer_top_lianxi {
+  float: left; }
+
+.footer_top_lianxi h2 {
+  font-size: 26px;
+  color: #ff6a00;
+  line-height: 36px;
+  text-align: center;
+  font-weight: 100; }
+
+.footer_top_lianxi p {
+  font-size: 12px;
+  color: #cccccc;
+  line-height: 22px;
+  text-align: center; }
+
+.footer_top_lianxi p:last-child {
+  line-height: 50px; }
+
+.footer_bom {
+  width: 100%; }
+
+.footer_bom p {
+  text-align: center;
+  font-size: 12px;
+  line-height: 36px;
+  color: #cccccc; }
+
+.footer_bom p img {
+  margin-left: 20px; }
+
+.footer_bom p a {
+  color: #cccccc;
+  margin: 0 20px; }
+
+.footer_bom p:last-child a {
+  margin-right: 20px;
+  margin-left: 0; }
+
+/*# sourceMappingURL=shoppingcarts.css.map */

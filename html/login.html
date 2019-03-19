@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../images/bitbug_favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>登录页面</title>
+</head>
+<body>
+    <!-- header部分 -->
+    <header>
+        <div class="header">
+            <img src="../images/logo.gif" alt="">
+            <p>如未注册 , 点此 <a href="../html/register.html"> 注 册 </a></p>
+        </div>
+    </header>
+    
+    <!--registers-->
+    <div class="registers">
+        <div class="registers_top">
+            <h3><i class="iconfont icon-webtubiaoku03"></i>会员登录</h3>
+            <h3><i class="iconfont icon-shouji"></i>手机动态密码登录</h3>
+        </div>
+        <div class="registers_main">
+            <ul>
+                <li class="input01">
+                    <input type="text" id="textId"/>
+                    <span>用户名</span>
+                    <p>×</p>
+                </li>
+                <li class="input02">
+                	<p>用户名长度不能少于 3 个字符。</p>
+                </li>
+                <li class="input01">
+                    <input type="password" id="password01"/>
+                    <span>密码</span>
+                    <p>×</p>
+                </li>
+                <li class="input02">
+                	<p>登录密码不能少于 6 个字符。</p>
+                </li>
+                <div class="yanzm">
+	                <li class="input01 input06">
+	                    <input type="text"/>
+	                    <span>验证码</span>
+	                </li>
+	                <li class="input01 input06">
+	                    <img src="../images/suiji.jpg" alt="" width="100%" />
+	                </li>
+                </div><br><br><br><br>
+                <div class="xieyi">
+                	<input type="checkbox" class="input07"/>
+                	<p>我已看过并接受《<a href="">我接受</a>》</p>
+                </div><br>
+                <li class="input01 button">
+                    <button id="btn">登录</button>
+                </li>
+                <br />
+                <br />
+                <span>使用第三方账号登录</span>
+                <br />
+                <br />
+                <div class="disanfang">
+                	<img src="../images/qq.jpg" alt="" />
+                	<img src="../images/wb.jpg" alt="" />
+                </div>
+                <br />
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.SuperSlide.2.1.1.source.js"></script>
+<script type="text/javascript" src="../js/cookie.js">
+	
+</script>
+<script>
+	
+$(function(){
+	
+	$("input").focus(
+		function(){
+			$(this).parent(".input01").find("span").css({
+				display:"none"
+			})
+		}
+	);
+	// 验证是否都验证正确
+	var k1 = false;
+	var k2 = false;
+	var k3 = false;
+	
+	$("#textId").blur(
+		function(){
+			let a = $(this).val();
+			if(a.length<=0){
+				$(this).parent(".input01").find("p").show();
+				$(this).parent(".input01").next(".input02").find("p").show();
+				$(this).parent(".input01").css({border:"1px solid #fe564b"})
+			}else{
+				let reg = /^[\S](\S)+[\S]$/;
+				if(!reg.test(a)){
+					$(this).parent(".input01").find("p").show();
+					$(this).parent(".input01").next(".input02").find("p").show();
+					$(this).parent(".input01").css({border:"1px solid #fe564b"})
+				}else{
+					console.log(1111111)
+					$(this).parent(".input01").find("p").show();
+					$(this).parent(".input01").find("p").html("");
+					$(this).parent(".input01").find("p").html("√");
+					$(this).parent(".input01").find("p").css({color:"#fff",backgroundColor:"green"});
+					$(this).parent(".input01").next(".input02").find("p").css({display:"none"})
+					$(this).parent(".input01").css({border:"1px solid #cccccc"})
+					var k1 = false;
+				}
+			}
+			let str = "username="+$('#textId').val()+"&password="+$('#password01').val();
+//			$.ajax({
+//				type:"post",
+//				url:"../php/login01.php",
+//              Async:true,
+//              data:str,
+//              success:function(data){
+//              	console.log(data)
+//              	console.log($('#textId').val())
+//                  //5.响应
+//                  if(data == 1){
+//                    	alert("已注册，可以使用！");
+//                  }else{
+//                  	alert("请注册！");
+////                  	location.href="http://localhost/floweritem/html/login.html";
+//                  }
+//              },
+//			})
+		}
+	);
+	$("#textId").keyup(
+		function(){
+			let a = $(this).val();
+			let reg = /^[\S](\S)+[\S]$/;
+			if(!reg.test(a)){
+				$(this).parent(".input01").find("p").show();
+				$(this).parent(".input01").next(".input02").find("p").show();
+				$(this).parent(".input01").css({border:"1px solid #fe564b"})
+			}else{
+				$(this).parent(".input01").find("p").show();
+				$(this).parent(".input01").find("p").html("");
+				$(this).parent(".input01").find("p").html("√");
+				$(this).parent(".input01").find("p").css({color:"#fff",backgroundColor:"green"});
+				$(this).parent(".input01").next(".input02").find("p").css({display:"none"})
+				$(this).parent(".input01").css({border:"1px solid #cccccc"})
+			}
+		}
+	);
+
+	$("#password01").blur(
+		function(){
+			let a = $(this).val();
+			if(a.length<=0){
+				$(this).parent(".input01").find("p").show();
+				$(this).parent(".input01").next(".input02").find("p").show();
+				$(this).parent(".input01").css({border:"1px solid #fe564b"})
+			}else{
+				let reg = /(\w){5}(\w){1,11}/gi;
+				if(!reg.test(a)){
+					$(this).parent(".input01").find("p").show();
+					$(this).parent(".input01").next(".input02").find("p").show();
+					$(this).parent(".input01").next(".input02").find("p").html("登录密码不能少于 6 个字符。");
+					$(this).parent(".input01").css({border:"1px solid #fe564b"})
+				}else{
+					$(this).parent(".input01").find("p").show();
+					$(this).parent(".input01").find("p").html("√");
+					$(this).parent(".input01").find("p").css({color:"#fff",backgroundColor:"green"});
+					$(this).parent(".input01").next(".input02").find("p").css({display:"none"})
+					$(this).parent(".input01").css({border:"1px solid #cccccc"})
+				}
+			}
+		}
+	);
+	$("#password01").keyup(
+		function(){
+			let a = $(this).val();
+			let reg = /(\w){5}(\w){1,11}/gi;
+			if(!reg.test(a)){
+				$(this).parent(".input01").find("p").show();
+				$(this).parent(".input01").next(".input02").find("p").show();
+				$(this).parent(".input01").next(".input02").find("p").html("登录密码不能少于 6 个字符。");
+				$(this).parent(".input01").css({border:"1px solid #fe564b"})
+			}else{
+				$(this).parent(".input01").find("p").show();
+				$(this).parent(".input01").find("p").html("√");
+				$(this).parent(".input01").find("p").css({color:"#fff",backgroundColor:"green"});
+				$(this).parent(".input01").next(".input02").find("p").css({display:"none"})
+				$(this).parent(".input01").css({border:"1px solid #cccccc"})
+				var k3 = false;
+			}
+		}
+	);
+	
+	$("#btn").click(
+		function(){
+			$(this).css({border:"0"});
+			if(1){
+				let str = "username="+$('#textId').val()+"&password="+$('#password01').val();
+				$.ajax({ 
+					type:"post",
+					url:"../php/login.php",
+                    Async:true,
+                    data:str,
+                    success:function(data){
+                        //5.响应
+                        if(data=="1"){
+                        	//存在
+                              var username = setCookie("username",$("#textId").val(),7);
+                            alert("success");
+                            location.href="http://localhost/floweritem/html/index.html";
+                        }else{
+                        	//不存在
+                            alert("用户名不存在，请注册新用户！")
+                           	
+                        }
+                    },
+				})
+			}
+		}
+	);
+	
+})
+
+</script>

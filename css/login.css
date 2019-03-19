@@ -1,0 +1,183 @@
+body,p,div,ol,ul,dd,dt,td,form,input,h1,h2,h3,h4,h5,h6,input,select,textarea{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: "宋体",Arial;
+    background-color: #cccccc;
+    font:12px/1.4 "Microsoft YaHei";
+}
+li{
+	list-style: none;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+input{
+    outline: none;
+}
+
+
+/* header 部分 */
+header{
+    width: 100%;
+    height:100px;
+    background-color: #fff;
+}
+.header{
+    width:970px;
+    height: 100px;
+    margin:0 auto;
+}
+.header img{
+    float: left;
+    width:220px;
+    margin-top:22px;
+}
+.header p{
+    color: #333333;
+    font-size:14px;
+    float: right;
+    margin-top:56px;
+}
+.header p a{ 
+    display:inline-block;
+    width:50px;
+    height: 22px;
+    line-height: 22px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: #ff6a00;
+    color:#fff;
+}
+
+/* registers部分 */
+.registers{
+    width:980px;
+    margin:50px auto;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.registers_top{
+    width:100%;
+    height: 56px;
+}
+.registers_top h3{
+	box-sizing: border-box;
+    width:50%;
+    text-align: center;
+    font-size: 17px;
+    line-height: 56px;
+    font-weight: 100;
+    float: left;
+}
+.registers_top h3 i{
+	font-size: 24px;
+}
+.registers_top h3:first-child{
+    border-right: 1px dashed #cccccc;
+    border-bottom: 1px solid #ff6a00;
+    color:#ff6a00;
+}
+.registers_top h3:last-child{
+    color:#8a8a8a;
+    border-bottom: 1px solid #cccccc;
+}
+.registers_main{    /*注册部分*/
+	width: 398px;
+	margin: 0 auto;
+}
+.registers_main ul{
+	margin:40px 0;
+	width: 398px;
+}
+li{
+	margin: 0 auto;
+}
+.input01{
+	width:398px;
+	height:40px;
+	border:1px solid #cccccc;
+	position: relative;
+}
+.input01 input{
+	width:90%;
+	height:40px;
+	margin-left: 14px;
+	border:0;
+}
+.input01 span{
+	position:absolute;
+	top: 0;
+	left: 14px;
+	line-height: 40px;
+	color: #cccccc;
+}
+.input01 p{
+	position:absolute;
+	top: 14px;
+	right: 10px;
+	width: 14px;
+	height: 14px;
+	background-color: #fe564b;
+	font-size: 20px;
+	line-height: 12px;
+	border-radius: 50%;
+	color: #fff;
+	display: none;
+}
+.input02{
+	width:398px;
+	height:24px;
+	color: #ff6a00;
+}
+.input02 p{
+	display: none;
+}
+
+.yanzm{
+	width:100%;
+	display: block;
+}
+.input06{
+	width: 30%;
+	float: left;
+	margin-right:20px;
+}
+.input06 input{
+	width:80%;
+}
+.xieyi input{
+	
+}
+.input07{
+	margin-right: 6px;
+	float: left;
+}
+.input07 p{
+	float: left;
+}
+.button{
+	border: none;
+	border-radius:2px ;
+}
+button{
+	width: 100%;
+	height: 100%;
+	background-color: #ff6a00;
+	color: white;
+	border: none;
+	border-radius:2px ;
+	font-size: 18px;
+}
+.disanfang{
+	width:100%;
+	height: 30px;
+	margin-bottom: 40px;
+}
+.disanfang img{
+	margin-right:20px;
+}
